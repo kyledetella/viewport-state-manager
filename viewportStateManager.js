@@ -1,10 +1,13 @@
-/**
- * ViewportStateManager – Utility to observe viewport state based upon defined declaration of ranges & sizes/
- *
- * Dependencies: 
- *   – lodash.js (or underscore.js) - http://lodash.com/
+/*!
+ * ViewportStateManager v0.0.1
+ * Babysit your viewport so you can manage that UI you made!
+ * 
+ * Author: Kyle DeTella – @kyledetella / kyledetella.com
+ * https://github.com/kyledetella/viewportStateManager
  */
 ;(function (w) {
+
+  'use strict';
 
   //
   // Initiate variables accessible at any scope within
