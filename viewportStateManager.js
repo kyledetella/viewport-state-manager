@@ -98,7 +98,9 @@
         },
 
         /**
-         * Amount of debounce to add to our event, depending on the sensitivity of your UI schema, this may need to be changed
+         * Amount of debounce to add to our event, depending on
+         * the sensitivity of your UI schema, this may need
+         * to be changed
          * @type {Number}
          */
         debounceTime: 250,
