@@ -5,7 +5,7 @@ A viewport state manager utility to observe changes in breakpoints and adapt UIs
 
 ## Usage
 
-The only hard dependency is `lodash.js`[http://lodash.com] ord `underscore.js`[http://underscorejs.org].
+The only hard dependency is [`lodash.js`](http://lodash.com) or [`underscore.js`](http://underscorejs.org).
 
 ``` js
   
