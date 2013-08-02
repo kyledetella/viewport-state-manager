@@ -18,7 +18,4 @@ A viewport state manager utility to observe changes in breakpoints and adapt UIs
       handheld: [1, 767]
     }
   });
-
-// you can use `new` if you like
-new imagesLoaded( elem, callback )
 ```
