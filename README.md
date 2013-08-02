@@ -7,46 +7,6 @@ A viewport state manager utility to observe changes in breakpoints and adapt UIs
 
 ViewportStateManager is DOM library agnostic. It does however, require [`lodash.js`](http://lodash.com) or [`underscore.js`](http://underscorejs.org) as a dependency.
 
-### AMD
-The utility AMD compliant, so you can use it with [require.js](http://requirejs.org). Just remember, it carries its own dependency on 'lodash/underscore' so ensure that your configurations allow for VSM's consumption of that library.
-
-I typically use the '_' key for my lodash/underscore configuration in RequireJS to allow me to switch cleanly between the two. For example:
-
-``` js
-  // Use lodash
-  requirejs.config({
-    paths: {
-      '_' : 'lodash.compat.min'
-    }
-  });
-  
-  // Use underscore
-  requirejs.config({
-    paths: {
-      '_' : 'underscore'
-    }
-  });
-    
-  // And then in your modules
-  define(['_'], function (_) {
-    // _ is either lodash or underscore, which for the 
-    // most part is safely interchangeable
-  });
-    
-```
-
----
-
-To use ViewportStateManager via AMD:
-
-``` js
-  define(['viewportStateManager'], function (ViewportStateManager) {
-    // Do your thing...
-  });
-```
-
----
-
 Basic instantiation
 
 ``` js
@@ -118,7 +78,47 @@ Browser support for IE9+, Chrome, Firefox, Safari, Android 2.3+, iOS 5+.
 
 ---
 
-## TODO
+## AMD/RequireJS
+The utility AMD compliant, so you can use it with [require.js](http://requirejs.org). Just remember, it carries its own dependency on 'lodash/underscore' so ensure that your configurations allow for VSM's consumption of that library.
 
-+ Fully implement change callbacks
-+ Write out full documentation
+I typically use the '_' key for my lodash/underscore configuration in RequireJS to allow me to switch cleanly between the two. For example:
+
+``` js
+  // Use lodash
+  requirejs.config({
+    paths: {
+      '_' : 'lodash.compat.min'
+    }
+  });
+  
+  // Use underscore
+  requirejs.config({
+    paths: {
+      '_' : 'underscore'
+    }
+  });
+    
+  // And then in your modules
+  define(['_'], function (_) {
+    // _ is either lodash or underscore, which for the 
+    // most part is safely interchangeable
+  });
+    
+```
+
+To use ViewportStateManager via AMD:
+
+``` js
+  define(['viewportStateManager'], function (ViewportStateManager) {
+    // Do your thing...
+  });
+```
+
+---
+
+## TODO
++ Allow for overlap across breakpoint ranges
++ Add method to toggle listeners on/off
++ Add destroy method
++ Add some examples
++ Write out tests
