@@ -1,4 +1,4 @@
-viewportManager
+ViewportManager
 ===============
 
-A viewport state manager utility to observe changes in breakpoints and adapt UIs accordingly
+A viewport state manager utility to observe changes in breakpoints and adapt UIs accordingly.
