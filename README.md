@@ -5,15 +5,22 @@ A viewport state manager utility to observe changes in breakpoints and adapt UIs
 
 ## Usage
 
-The only hard dependency is [`lodash.js`](http://lodash.com) or [`underscore.js`](http://underscorejs.org).
+ViewportStateManager is DOM library agnostic. It does however, require [`lodash.js`](http://lodash.com) or [`underscore.js`](http://underscorejs.org) as a dependency.
+
+### AMD
+The utility AMD compliant, so you can use it with [require.js](http://requirejs.org).
+
+``` js
+  define(['/path/to/viewportStateManager'], function (ViewportStateManager) { // Do your thing... });
+```
 
 ``` js
   
   // Basic instantiation
-  var viewportManager = new ViewportManager();
+  var viewportStateManager = new ViewportStateManager();
   
   // Pass in configurations
-  var viewportManager = new ViewportManager({
+  var viewportStateManager = new ViewportStateManager({
     ranges: {
       desktop: [1025, 5000],
       tablet: [768, 1024],
