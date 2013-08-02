@@ -20,6 +20,8 @@ A viewport state manager utility to observe changes in breakpoints and adapt UIs
   });
 ```
 
+---
+
 ## Browser Compatibility
 
 Browser support for IE9+, Chrome, Firefox, Safari, Android 2.3+, iOS 5+.
