@@ -72,10 +72,43 @@ Basic instantiation
 
 ### Configuration Options
 
-_ranges_ - An object containing 'breakpoint' names and an associated min/max pixel value that comprises its range
+#### ranges (breakpoints)
+**Type:** _Object_
+
+```js
+  // key – breakpoint name
+  // value – min, max array of pixel dimenstions
+  tablet: [768, 1024]
+```
+
++ default – `desktop: [1025, 5000], tablet: [768, 1024], handheld: [1, 767]`
 
 
+#### callback
+Method to be applied each time your viewport crosses into a new breakpoint range
 
+**Type:** _Function_
+
+```js
+ function (newState, oldState) { /* ... */ };
+```
+
++ `newState` - **Type:** _String_ - The name of the breakpoint you are currently in
++ `oldState` - **Type:** _String_ - The name of the breakpoint you exited from
+
+
+#### debounceTime
+Duration of debounce set on the window `resize` or `orientationchange` events
+
+**Type:** _Number_
++ default: `250`
+
+
+#### currentViewportState
+The default viewport state. _Note:_ This will automatically be set on instantiation, so this step isn't always necessary.
+
+**Type:** _String_
++ default: `''`
 
 ---
 
