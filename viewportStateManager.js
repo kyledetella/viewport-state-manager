@@ -76,7 +76,8 @@
       firstRun: true,
 
       /**
-       * Configuration hash to be consumed by instances of this class. May be overwritten on instantiation via passed in object
+       * Configuration hash to be consumed by instances of this
+       * class. May be overwritten via instantiation argument
        * @type {Object}
        */      
       defaults: {
