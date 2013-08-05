@@ -6,6 +6,8 @@
  * https://github.com/kyledetella/viewportStateManager
  */
 
+/* global define:true */
+
 (function (w) {
 
   'use strict';
@@ -85,7 +87,7 @@
        * Configuration hash to be consumed by instances of this
        * class. May be overwritten via instantiation argument
        * @type {Object}
-       */      
+       */
       defaults: {
 
         /**
@@ -116,7 +118,7 @@
          * Determine event to watch for Viewport change
          * @type {String}
          */
-        viewportChangeEvent: 'onorientationchange' in w ? 'orientationchange' : 'resize'        
+        viewportChangeEvent: 'onorientationchange' in w ? 'orientationchange' : 'resize'
       },
 
       /**
@@ -160,7 +162,7 @@
       
       /**
        * Debounced handler of window resize/orientationchange event
-       */      
+       */
       observeViewportState: _.debounce(function () {
         // 
         // TODO: Ensure full browser support

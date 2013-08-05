@@ -1,0 +1,14 @@
+{
+  "name": "viewportStateManager",
+  "description": "A viewport state manager utility to observe changes in breakpoints and adapt UIs accordingly.",
+  "private": true,
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify" : "latest"
+  },
+  "engines": {
+    "node": "~0.10.2",
+    "npm": "~1.2.15"
+  }  
+}
