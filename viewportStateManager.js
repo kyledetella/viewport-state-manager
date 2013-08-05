@@ -1,11 +1,12 @@
-/*!
+/*
  * ViewportStateManager v0.0.1
  * Babysit your viewport so you can manage that UI you made!
  * 
  * Author: Kyle DeTella – @kyledetella / kyledetella.com
  * https://github.com/kyledetella/viewportStateManager
  */
-;(function (w) {
+
+(function (w) {
 
   'use strict';
 
@@ -23,6 +24,11 @@
    * @return {Function}  Return reference to ViewportStateManager
    */
   VM = function (_) {
+
+    /**
+     * Localized var to export
+     */
+    var ViewportStateManager;
 
     /**
      * Localized instance of ViewportStateManager

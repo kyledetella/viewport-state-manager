@@ -79,7 +79,7 @@ Browser support for IE9+, Chrome, Firefox, Safari, Android 2.3+, iOS 5+.
 ---
 
 ## AMD/RequireJS
-The utility AMD compliant, so you can use it with [require.js](http://requirejs.org). Just remember, it carries its own dependency on 'lodash/underscore' so ensure that your configurations allow for VSM's consumption of that library.
+The utility is AMD compliant, so you can use it with [require.js](http://requirejs.org). Just remember, it carries its own dependency on 'lodash/underscore' so ensure that your configurations allow for VSM's consumption of that library.
 
 I typically use the '_' key for my lodash/underscore configuration in RequireJS to allow me to switch cleanly between the two. For example:
 
