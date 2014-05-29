@@ -14,18 +14,23 @@
 
   var VM;
   var doc = document;
+  var debounceTime;
 
   function merge(base, options) {
     for (var key in options) {
       base[key] = options[key];
     }
+
+    return base;
   }
 
   function bind (fn, ctx) {
-    return fn.call(ctx, arguments);
+    return function () {
+      fn.apply(ctx, arguments);
+    }
   }
 
-  function debounce (fn, delay) {
+  function debounce (func, wait, immediate) {
     var timeout, args, context, timestamp, result;
 
     function getNow() {
@@ -67,7 +72,7 @@
 
     ViewportStateManager = function (opts) {
       this.config = merge(this.defaults, opts);
-      this.debounceTime = opts.debounceTime ? opts.debounceTime : this.defaults.debounceTime;
+      debounceTime = opts.debounceTime ? opts.debounceTime : this.defaults.debounceTime;
 
       global.addEventListener(this.config.viewportChangeEvent, bind(this.observeViewportState, this));
 
@@ -121,20 +126,21 @@
         }
       },
 
-      observeViewportState: debounce(bind(function () {
+      observeViewportState: debounce(function () {
         var _w = doc.documentElement.clientWidth;
+        var ranges = this.config.ranges;
 
-        for (var range in ranges) {
-          if (_w >= range[0] && _w <= range[1]) {
+        for (var breakpoint in ranges) {
+          if (_w >= ranges[breakpoint][0] && _w <= ranges[breakpoint][1]) {
             if (this.firstRun) {
-              this.setViewportState(name);
+              this.setViewportState(breakpoint);
               this.firstRun = false;
             } else {
-              this.changeViewportState(name);
+              this.changeViewportState(breakpoint);
             }
           }
         }
-      }, this), this.debounceTime)
+      }, debounceTime)
     };
 
     return ViewportStateManager;
@@ -149,4 +155,4 @@
     global.viewportStateManager = VM();
   }
 
-})(this);
+})(window);
