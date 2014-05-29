@@ -121,7 +121,7 @@
         }
       },
 
-      observeViewportState: debounce(function () {
+      observeViewportState: debounce(bind(function () {
         var _w = doc.documentElement.clientWidth;
 
         for (var range in ranges) {
@@ -134,7 +134,7 @@
             }
           }
         }
-      }, this.debounceTime)
+      }, this), this.debounceTime)
     };
 
     return ViewportStateManager;
