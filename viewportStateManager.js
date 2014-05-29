@@ -143,6 +143,8 @@
 
   if (typeof define === 'function' && define.amd) {
     define(VM);
+  } else if ( typeof exports === 'object' ) {
+    module.exports = VM();
   } else {
     global.viewportStateManager = VM();
   }
