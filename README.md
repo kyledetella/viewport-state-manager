@@ -55,7 +55,7 @@ define(['viewportStateManager'], function (ViewportStateManager) {
 });
 ```
 
-### Without modules
+### Global
 
 ```html
 <html>

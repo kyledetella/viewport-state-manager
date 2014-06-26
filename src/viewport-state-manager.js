@@ -16,7 +16,6 @@ function ViewportStateManager (opts) {
   return this;
 }
 
-
 ViewportStateManager.prototype = helpers.merge(ViewportStateManager.prototype, {
   lastViewportState: '',
   currentViewportState: '',
