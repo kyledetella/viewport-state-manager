@@ -1,6 +1,6 @@
 {
   "name": "viewport-state-manager",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Babysit your viewport and adapt your UIs.",
   "main": "src/viewport-state-manager.js",
   "dependencies": {},

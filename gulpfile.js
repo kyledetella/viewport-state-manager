@@ -5,6 +5,7 @@ var rename = require('gulp-rename');
 var jshint = require('gulp-jshint');
 var reporter = require('jshint-stylish');
 var size = require('gulp-size');
+var bump = require('gulp-bump');
 
 var SRC = './src/viewport-state-manager.js';
 
@@ -31,6 +32,12 @@ gulp.task('test', function () {
   gulp.src(SRC)
   .pipe(jshint('.jshintrc'))
   .pipe(jshint.reporter(reporter));
+});
+
+gulp.task('bump', function (){
+  gulp.src('./package.json')
+  .pipe(bump({ type:'point' }))
+  .pipe(gulp.dest('./'));
 });
 
 gulp.task('default', ['build:src', 'build:examples']);
