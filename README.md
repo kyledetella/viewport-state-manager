@@ -1,6 +1,8 @@
 ViewportStateManager
 ====================
 
+[![NPM](https://nodei.co/npm/viewport-state-manager.png)](https://nodei.co/npm/viewport-state-manager/)
+
 Observe changes in the viewport and adapt your UIs accordingly.
 
 ## Usage
