@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kyledetella/viewportStateManager.git"
+    "url": "https://github.com/kyledetella/viewport-state-manager.git"
   },
   "keywords": [
     "viewport",
@@ -31,7 +31,7 @@
   "author": "Kyle DeTella",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kyledetella/viewportStateManager/issues"
+    "url": "https://github.com/kyledetella/viewport-state-manager/issues"
   },
-  "homepage": "https://github.com/kyledetella/viewportStateManager"
+  "homepage": "https://github.com/kyledetella/viewport-state-manager"
 }
