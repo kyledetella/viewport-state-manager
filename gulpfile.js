@@ -10,7 +10,6 @@ var bump = require('gulp-bump');
 var SRC = './src/viewport-state-manager.js';
 
 /* Build source */
-
 gulp.task('compile', function () {
   gulp.src(SRC)
   .pipe(browserify({
