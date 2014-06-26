@@ -14,8 +14,32 @@ npm install viewport-state-manager
 
 
 ```js
-  var ViewportStateManager = require('viewport-state-manager');
+var ViewportStateManager = require('viewport-state-manager');
 
+var manager = new ViewportStateManager({
+  ranges: {
+    desktop: [1025, 5000],
+    tablet: [768, 1024],
+    handheld: [1, 767]
+  },
+  callback: function (currentState, previousState) {
+    // ...
+  }
+});
+```
+
+### RequireJS
+ViewportStateManager is AMD compliant, so you can use it with [require.js](http://requirejs.org).
+
+```js
+// Configure RequireJs
+requirejs.config({
+  paths: {
+    'viewportStateManager' : 'path/to/viewport-state-manager'
+  }
+});
+
+define(['viewportStateManager'], function (ViewportStateManager) {
   var manager = new ViewportStateManager({
     ranges: {
       desktop: [1025, 5000],
@@ -26,20 +50,18 @@ npm install viewport-state-manager
       // ...
     }
   });
+});
 ```
 
-### RequireJS
-ViewportStateManager is AMD compliant, so you can use it with [require.js](http://requirejs.org).
+### Without modules
 
-```js
-  // Configure RequireJs
-  requirejs.config({
-    paths: {
-      'viewportStateManager' : 'path/to/viewport-state-manager'
-    }
-  });
-  
-  define(['viewportStateManager'], function (ViewportStateManager) {
+```html
+<html>
+  <head></head>
+  <body>
+
+  <script src="viewport-state-manager.js"></script>
+  <script>
     var manager = new ViewportStateManager({
       ranges: {
         desktop: [1025, 5000],
@@ -50,31 +72,9 @@ ViewportStateManager is AMD compliant, so you can use it with [require.js](http:
         // ...
       }
     });
-  });
-```
-
-### Without modules
-
-```html
-  <html>
-    <head></head>
-    <body>
-
-      <script src="viewport-state-manager.js"></script>
-      <script>
-        var manager = new ViewportStateManager({
-          ranges: {
-            desktop: [1025, 5000],
-            tablet: [768, 1024],
-            handheld: [1, 767]
-          },
-          callback: function (currentState, previousState) {
-            // ...
-          }
-        });
-      </script>
-    </body>
-  </html>
+  </script>
+  </body>
+</html>
 ```
 
 ## Options
