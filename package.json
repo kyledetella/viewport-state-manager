@@ -1,14 +1,36 @@
 {
-  "name": "viewportStateManager",
-  "description": "A viewport state manager utility to observe changes in breakpoints and adapt UIs accordingly.",
-  "private": true,
+  "name": "viewport-state-manager",
   "version": "0.1.0",
+  "description": "Babysit your viewport and adapt your UIs.",
+  "main": "src/viewport-state-manager.js",
+  "dependencies": {},
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-uglify" : "latest"
+    "gulp": "^3.8.2",
+    "gulp-uglify": "~0.3.1",
+    "jshint-stylish": "^0.2.0",
+    "gulp-jshint": "^1.6.3",
+    "gulp-browserify": "^0.5.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-size": "^0.4.0"
   },
-  "engines": {
-    "node": "~0.10.2",
-    "npm": "~1.2.15"
-  }  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kyledetella/viewportStateManager.git"
+  },
+  "keywords": [
+    "viewport",
+    "manager",
+    "responsive",
+    "respond",
+    "observe"
+  ],
+  "author": "Kyle DeTella",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kyledetella/viewportStateManager/issues"
+  },
+  "homepage": "https://github.com/kyledetella/viewportStateManager"
 }

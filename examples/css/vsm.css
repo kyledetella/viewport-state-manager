@@ -1,0 +1,21 @@
+html, body {
+  font-family: 'Roboto', sans-serif;
+}
+
+#outlet {
+  margin: 1em;
+}
+
+h1 {
+  margin: 0;
+  line-height: 1;
+  font-weight: 100;
+  color: #777;
+}
+
+p {
+  font-weight: 700;
+  font-size: 0.8em;
+  color: #3a3a3a;
+  line-height: 1;
+}
