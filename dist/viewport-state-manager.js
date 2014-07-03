@@ -11,13 +11,16 @@ function ViewportStateManager (opts) {
   this.config = helpers.merge(this.defaults, opts);
   debounceTime = opts.debounceTime ? opts.debounceTime : this.defaults.debounceTime;
 
-  global.addEventListener(this.config.viewportChangeEvent, helpers.bind(this.observeViewportState, this));
+  if (window.addEventListener) {
+    global.addEventListener(this.config.viewportChangeEvent, helpers.bind(this.observeViewportState, this));
+  } else {
+    global.attachEvent('on' + this.config.viewportChangeEvent, helpers.bind(this.observeViewportState, this));
+  }
 
   this.observeViewportState.call(this, null);
 
   return this;
 }
-
 
 ViewportStateManager.prototype = helpers.merge(ViewportStateManager.prototype, {
   lastViewportState: '',
