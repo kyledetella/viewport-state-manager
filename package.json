@@ -2,8 +2,13 @@
   "name": "viewport-state-manager",
   "version": "0.1.3",
   "description": "Babysit your viewport and adapt your UIs.",
-  "main": "src/viewport-state-manager.js",
-  "dependencies": {},
+  "main": "src/main.js",
+  "dependencies": {
+    "lodash.assign": "^3.0.0",
+    "lodash.bind": "^3.1.0",
+    "lodash.debounce": "^3.0.3",
+    "lodash.has": "^3.0.0"
+  },
   "devDependencies": {
     "browserify": "^9.0.3",
     "gulp": "^3.8.2",

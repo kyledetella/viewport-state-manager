@@ -12,9 +12,14 @@
 
   vsm = new ViewportStateManager({
     ranges: {
-      desktop: [1025, 5000],
-      tablet: [768, 1024],
-      handheld: [1, 767]
+      smallest: [1, 200],
+      smaller: [201, 300],
+      small: [301, 400],
+      medium: [401, 500],
+      large: [501, 600],
+      larger: [601, 700],
+      largest: [701, 800],
+      jumbo: [801, 9000]
     },
     callback: handleViewportStateChange
   });

@@ -8,7 +8,7 @@ var size = require('gulp-size');
 var bump = require('gulp-bump');
 var source = require('vinyl-source-stream');
 
-var SRC = './src/viewport-state-manager.js';
+var SRC = './src/main.js';
 
 gulp.task('compile', function () {
   return browserify(SRC, {standalone: 'ViewportStateManager'})
